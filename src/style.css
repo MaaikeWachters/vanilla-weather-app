@@ -32,9 +32,10 @@ img {
   height: 80px;
 }
 
-.weather-description {
+#weather-description {
   color: blue;
   font-size: 24px;
+  text-transform: capitalize;
 }
 .weather-temperature .units {
   font-size: 16px;

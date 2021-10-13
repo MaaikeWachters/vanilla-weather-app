@@ -12,6 +12,8 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
     <link rel="stylesheet" href="src/style.css" class="stylesheet" />
   </head>
   <body>
@@ -19,8 +21,8 @@
       <div class="weather-app-wrapper">
         <div class="weather-app">
           <div class="row header">
-            <h1>Rotterdam</h1>
-            <h2>Friday 05:00</h2>
+            <h1 id="city"></h1>
+            <h2 id="date">Friday 05:00</h2>
           </div>
           <div class="row weather">
             <div class="col-6 left">
@@ -29,16 +31,16 @@
                   src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
                 />
 
-                <strong>12</strong>
+                <strong id="temperature">12</strong>
                 <span class="units"> °C | °F</span>
               </div>
             </div>
             <div class="col-6 right">
               <ul>
-                <li><span class="weather-description">Clear</span></li>
-                <li>Precipitation: 0%</li>
-                <li>Humidity: 73%</li>
-                <li>Wind: 2 km/h</li>
+                <li><span id="weather-description">Clear</span></li>
+
+                <li>Humidity: <span id="humidity">73</span>%</li>
+                <li>Wind: <span id="wind-speed">10</span> km/h</li>
               </ul>
             </div>
           </div>
