@@ -2,11 +2,13 @@ h1 {
   color: blue;
   font-size: 32px;
   line-height: 36px;
+  text-align: center;
 }
 
 h2 {
   font-size: 24px;
   line-height: 30px;
+  text-align: center;
 }
 
 li {
@@ -21,12 +23,24 @@ ul {
 }
 
 strong {
-  font-size: 64px;
+  font-size: 80px;
+  line-height: 1;
 }
 
+img {
+  width: 80px;
+  height: 80px;
+}
+
+.weather-description {
+  color: blue;
+  font-size: 24px;
+}
 .weather-temperature .units {
-  position: relative;
   font-size: 16px;
+  position: relative;
+  top: -16px;
+  margin-left: 12px;
 }
 .weather-app-wrapper {
   max-width: 600px;
