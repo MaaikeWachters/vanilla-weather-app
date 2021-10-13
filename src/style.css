@@ -32,6 +32,14 @@ img {
   height: 80px;
 }
 
+a {
+  text-decoration: none;
+}
+.active {
+  color: black;
+  cursor: default;
+}
+
 #weather-description {
   color: blue;
   font-size: 24px;
