@@ -23,58 +23,75 @@
   </head>
   <body>
     <div class="container">
-      <div class="weather-app-wrapper">
-        <div class="weather-app">
-          <form id="search-form">
+      <div class="row">
+        <div id="greeting"></div>
+      </div>
+      <div class="row">
+        
+          <div class="weather-app-wrapper">
+            You are in:
+            <div class="row header">
+              <h1 id="city"></h1>
+              Today is:
+              <h2 id="date"></h2>
+            </div>
+
             <div class="row">
-              <div class="col-9">
-                <input
-                  type="search"
-                  placeholder="Type a city"
-                  class="form-control"
-                  id="city-input"
-                />
+              Go somewhere else?
+              <form id="search-form">
+                <div class="row">
+                  <div class="col-9">
+                    <input
+                      type="search"
+                      placeholder="Type a city"
+                      class="form-control"
+                      id="city-input"
+                    />
+                  </div>
+                  <div class="col-3">
+                    <input
+                      type="submit"
+                      value="search"
+                      class="btn btn-primary"
+                    />
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="row weather">
+              <div class="col-6 left">
+                <div class="weather-temperature d-flex p-2 align-items-center">
+                  <img src="" id="icon" />
+
+                  <strong id="temperature">12</strong>
+                  <span class="units"> °C </span>
+                </div>
               </div>
-              <div class="col-3">
-                <input type="submit" value="search" class="btn btn-primary" />
+              <div class="col-6 right d-flex p-2 align-items-center">
+                <ul>
+                  <li><span id="weather-description"></span></li>
+
+                  <li>Humidity: <span id="humidity"></span>%</li>
+                  <li>Wind: <span id="wind-speed"></span> km/h</li>
+                </ul>
               </div>
             </div>
-          </form>
-          <div class="row header">
-            <h1 id="city"></h1>
-            <h2 id="date"></h2>
+
+            <div class="weather-forecast" id="forecast"></div>
+            Last updated at: <span id="last-updated-at"></span>
           </div>
-          <div class="row weather">
-            <div class="col-6 left">
-              <div class="weather-temperature d-flex p-2 align-items-center">
-                <img src="" id="icon" />
-
-                <strong id="temperature">12</strong>
-                <span class="units"> °C </span>
-              </div>
-            </div>
-            <div class="col-6 right d-flex p-2 align-items-center">
-              <ul>
-                <li><span id="weather-description"></span></li>
-
-                <li>Humidity: <span id="humidity"></span>%</li>
-                <li>Wind: <span id="wind-speed"></span> km/h</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="weather-forecast" id="forecast"></div>
-        </div>
-        <div class="footer">
-          <small
-            ><a href="https://github.com/MaaikeWachters/vanilla-weather-app"
-              >Open-source code</a
-            >
-            by Maaike Wachters</small
+   
+      </div>
+      <div class="footer">
+        <small
+          ><a href="https://github.com/MaaikeWachters/vanilla-weather-app"
+            >Open-source coded</a
           >
-        </div>
+          with 💖&nbsp; by Maaike Wachters</small
+        >
       </div>
     </div>
+
     <script src="src/app.js"></script>
   </body>
 </html>
