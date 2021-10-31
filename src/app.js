@@ -61,16 +61,18 @@ function displayForecast(response) {
   let days = ["Thu", "Fri", "Sat", "Sun"];
 
   forecast.forEach(function (forecastDay, index) {
-    if (index < 5) {
+    if (index < 6) {
       forecastHTML =
         forecastHTML +
         `
 
     <div class="col-2">
-      <div class="weather-forecast-date"></div>
+      <div class="weather-forecast-day"></div>
       ${formatDay(forecastDay.dt)}
-      <img src="../media/icons/${forecastDay.weather[0].icon}.png" width="38" />
-      <div class="weather-forecast-temperature">
+      <div><img class="forecast-image" src="media/icons/${
+        forecastDay.weather[0].icon
+      }.png" />
+      </div><div class="weather-forecast-temperature">
         <span class="weather-forecast-temperature-max">${Math.round(
           forecastDay.temp.max
         )}</span>
@@ -158,10 +160,10 @@ function checkTimeOfDay() {
   if (hours < 6) {
     let greetingElement = document.querySelector("#greeting");
     greetingElement.innerHTML = "Good night";
-  } else if (hours > 6 && hours < 12) {
+  } else if (hours >= 6 && hours < 12) {
     let greetingElement = document.querySelector("#greeting");
     greetingElement.innerHTML = "Good morning";
-  } else if (hours > 12 && hours < 18) {
+  } else if (hours >= 12 && hours < 18) {
     let greetingElement = document.querySelector("#greeting");
     greetingElement.innerHTML = "Good afternoon";
   } else {
