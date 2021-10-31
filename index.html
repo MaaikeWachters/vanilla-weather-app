@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Codystar:wght@300;400&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
     <link
@@ -27,61 +27,56 @@
         <div id="greeting"></div>
       </div>
       <div class="row">
-        
-          <div class="weather-app-wrapper">
-            You are in:
-            <div class="row header">
-              <h1 id="city"></h1>
-              Today is:
-              <h2 id="date"></h2>
-            </div>
-
-            <div class="row">
-              Go somewhere else?
-              <form id="search-form">
-                <div class="row">
-                  <div class="col-9">
-                    <input
-                      type="search"
-                      placeholder="Type a city"
-                      class="form-control"
-                      id="city-input"
-                    />
-                  </div>
-                  <div class="col-3">
-                    <input
-                      type="submit"
-                      value="search"
-                      class="btn btn-primary"
-                    />
-                  </div>
-                </div>
-              </form>
-            </div>
-            <div class="row weather">
-              <div class="col-6 left">
-                <div class="weather-temperature d-flex p-2 align-items-center">
-                  <img src="" id="icon" />
-
-                  <strong id="temperature">12</strong>
-                  <span class="units"> °C </span>
-                </div>
-              </div>
-              <div class="col-6 right d-flex p-2 align-items-center">
-                <ul>
-                  <li><span id="weather-description"></span></li>
-
-                  <li>Humidity: <span id="humidity"></span>%</li>
-                  <li>Wind: <span id="wind-speed"></span> km/h</li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="weather-forecast" id="forecast"></div>
-            Last updated at: <span id="last-updated-at"></span>
+        <div class="weather-app-wrapper">
+          <span class="text">You are in:</span>
+          <div class="row header">
+            <h1 id="city"></h1>
+            <span class="text">Today is:</span>
+            <h2 id="date"></h2>
           </div>
-   
+
+          <div class="row weather">
+            <div class="col-6 left">
+              <div class="weather-temperature d-flex p-2 align-items-center">
+                <img src="" id="icon" />
+
+                <strong id="temperature">12</strong>
+                <span class="units"> °C </span>
+              </div>
+            </div>
+            <div class="col-6 right d-flex p-2 align-items-center">
+              <ul>
+                <li><span id="weather-description"></span></li>
+
+                <li>Humidity: <span id="humidity"></span>%</li>
+                <li>Wind: <span id="wind-speed"></span> km/h</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="weather-forecast" id="forecast"></div>
+
+          <div class="row">
+            <span class="text">Go somewhere else?</span>
+            <form id="search-form">
+              <div class="row">
+                <div class="col-9">
+                  <input
+                    type="search"
+                    placeholder="Type a city"
+                    class="form-control"
+                    id="city-input"
+                  />
+                </div>
+                <div class="col-3">
+                  <input type="submit" value="search" class="btn btn-primary" />
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
       </div>
+
       <div class="footer">
         <small
           ><a href="https://github.com/MaaikeWachters/vanilla-weather-app"
@@ -89,6 +84,18 @@
           >
           with 💖&nbsp; by Maaike Wachters</small
         >
+        <div class="credit">
+          Photo by
+          <a
+            href="https://unsplash.com/@maiq?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+            >Tom Morel</a
+          >
+          on
+          <a
+            href="https://unsplash.com/s/photos/glitter-dark?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+            >Unsplash</a
+          >
+        </div>
       </div>
     </div>
 

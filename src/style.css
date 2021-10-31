@@ -1,5 +1,16 @@
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background-image: url("../media/pictures/dark_shiny.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 h1 {
-  color: #698996;
+  color: #deb841;
   font-size: 64px;
   text-align: center;
   font-family: "Montserrat", sans-serif;
@@ -9,7 +20,7 @@ h1 {
 h2 {
   font-size: 24px;
   text-align: center;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Montserrat", sans-serif;
   padding-bottom: 32px;
 }
 
@@ -17,7 +28,7 @@ li {
   list-style: none;
   font-size: 16px;
   line-height: 24px;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 ul {
@@ -28,7 +39,7 @@ ul {
 strong {
   font-size: 80px;
   line-height: 1;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 600;
 }
 
@@ -53,13 +64,19 @@ small a {
 }
 
 input {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
+.text {
+  color: #46b1c9;
+  font-family: "Montserrat", sans-serif;
+}
 #greeting {
+  padding: 32px;
   text-align: center;
-  color: black;
-  font-size: 64px;
+  color: #f3a9cc;
+  font-size: 80px;
+  font-family: "Codystar", cursive;
 }
 
 #weather-description {
@@ -75,7 +92,7 @@ input {
 
 .weather-app-wrapper {
   max-width: 600px;
-  border: 2px solid red;
+  border: 3px solid #f3a9cc;
   border-radius: 32px;
   margin: 0 auto;
   padding: 20px;

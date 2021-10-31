@@ -1,31 +1,6 @@
 // show current day
-function formatDate(timestamp) {
-  let date = new Date(timestamp);
-
-  let days = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
-  let day = days[date.getDay()];
-  return `${day}`;
-}
-
-// show forecast days
-function formatDay(timestamp) {
-  let date = new Date(timestamp * 1000);
-  let day = date.getDay();
-  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-  return days[day];
-}
-
-// show time last updated
-function formatTime(timestamp) {
-  let date = new Date(timestamp);
+function formatDate() {
+  let date = new Date();
   let hours = date.getHours();
 
   if (hours < 10) {
@@ -37,12 +12,44 @@ function formatTime(timestamp) {
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
-  return `${hours}:${minutes}`;
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = days[date.getDay()];
+
+  let months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  let month = months[date.getMonth()];
+
+  let todayDate = date.getDate();
+
+  return `${day}, ${month} ${todayDate}, ${hours}:${minutes}`;
 }
 
-function showLastUpdatedAt() {
-  let timeElement = document.querySelector("#last-updated-at");
-  timeElement.innerHTML = formatDate(response.data.dt * 1000);
+// show forecast days
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  return days[day];
 }
 
 // show forecast
@@ -62,9 +69,7 @@ function displayForecast(response) {
     <div class="col-2">
       <div class="weather-forecast-date"></div>
       ${formatDay(forecastDay.dt)}
-      <img src="http://openweathermap.org/img/wn/${
-        forecastDay.weather[0].icon
-      }@2x.png" width="38" />
+      <img src="../media/icons/${forecastDay.weather[0].icon}.png" width="38" />
       <div class="weather-forecast-temperature">
         <span class="weather-forecast-temperature-max">${Math.round(
           forecastDay.temp.max
@@ -108,13 +113,10 @@ function displayTemperature(response) {
   let dateElement = document.querySelector("#date");
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
 
-  let timeElement = document.querySelector("#last-updated-at");
-  timeElement.innerHTML = formatDate(response.data.dt * 1000);
-
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute(
     "src",
-    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    `media/icons/${response.data.weather[0].icon}.png`
   );
 
   getForecast(response.data.coord);
