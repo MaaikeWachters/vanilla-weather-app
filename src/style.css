@@ -22,6 +22,9 @@ ul {
   padding: 0;
 }
 
+form {
+  margin-bottom: 24px;
+}
 strong {
   font-size: 80px;
   line-height: 1;
@@ -41,45 +44,21 @@ a {
 input {
   font-family: "Montserrat", sans-serif;
 }
-
-#city {
-  color: #dcdba8;
-  font-size: 64px;
-  text-align: center;
-  font-family: "Montserrat", sans-serif;
+.weather {
   padding-top: 32px;
+  padding-bottom: 24px;
 }
-
-#date {
-  font-size: 24px;
-  text-align: center;
-  font-family: "Montserrat", sans-serif;
-  padding-bottom: 32px;
-  color: #dcdba8;
-}
-
-.header {
-  margin: 0;
-  padding: 0;
-}
-
-.text {
+.header-text,
+.search-form-text {
   color: #46b1c9;
   font-family: "Montserrat", sans-serif;
 }
 
-#greeting {
-  padding: 32px;
-  text-align: center;
-  color: #f3a9cc;
-  font-size: 80px;
-  font-family: "Codystar", cursive;
+.search-form-text {
+  margin-top: 24px;
+  margin-bottom: 16px;
 }
 
-#weather-description {
-  font-size: 24px;
-  text-transform: capitalize;
-}
 .weather-temperature .units {
   font-size: 16px;
   position: relative;
@@ -103,31 +82,29 @@ input {
 }
 
 .weather-forecast {
-  margin-top: 20px;
+  margin: 32px auto 24px auto;
   text-align: center;
   color: #dcdba8;
 }
 
 .weather-forecast-day {
   font-size: 16px;
-  opacity: 0.5;
+  padding-bottom: 12px;
 }
 
 .forecast-image {
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
 }
 
 .weather-forecast-temperature-min {
   opacity: 0.5;
+  margin-top: 12px;
 }
 
 .weather-forecast-temperature {
   font-size: 13px;
-}
-
-#temperature {
-  color: #dcdba8;
+  margin-top: 12px;
 }
 
 .credits {
@@ -140,4 +117,41 @@ input {
   text-decoration: none;
   font-weight: 400;
   color: #46b1c9;
+}
+
+.btn-primary {
+  background-color: #46b1c9;
+  border: #46b1c9;
+}
+
+#city {
+  color: #dcdba8;
+  font-size: 64px;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+}
+
+#date {
+  font-size: 24px;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  color: #dcdba8;
+}
+
+#greeting {
+  padding: 32px;
+  text-align: center;
+  color: #f3a9cc;
+  font-size: 80px;
+  font-family: "Codystar", cursive;
+}
+
+#weather-description {
+  font-size: 24px;
+  text-transform: capitalize;
+}
+
+#temperature {
+  color: #dcdba8;
+  margin-left: 16px;
 }

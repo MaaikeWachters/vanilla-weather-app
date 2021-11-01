@@ -27,11 +27,11 @@
         <div id="greeting"></div>
       </div>
       <div class="weather-app-wrapper">
-        <div class="row header">
-          <div class="col-3 text">You are in:</div>
+        <div class="row header d-flex p-2 align-items-center">
+          <div class="col-3 header-text">You are in:</div>
           <div class="col-9" id="city"></div>
 
-          <div class="col-3 text">Today is:</div>
+          <div class="col-3 header-text">Today is:</div>
           <div class="col-9" id="date"></div>
         </div>
 
@@ -40,7 +40,7 @@
             <div class="weather-temperature d-flex p-2 align-items-center">
               <img src="" id="icon" />
 
-              <strong id="temperature">12</strong>
+              <strong id="temperature"></strong>
               <span class="units"> °C </span>
             </div>
           </div>
@@ -57,7 +57,7 @@
         <div class="weather-forecast" id="forecast"></div>
 
         <div class="row">
-          <span class="text">Go somewhere else?</span>
+          <span class="search-form-text">Go somewhere else?</span>
           <form id="search-form">
             <div class="row">
               <div class="col-9">
